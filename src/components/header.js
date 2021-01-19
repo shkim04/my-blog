@@ -7,7 +7,7 @@ export default class Header extends Component {
     render() {
         return (
             <header className='header-container'>
-               <div className='description clearfix'>
+               <div className='description'>
                   <div className='site-name-container'>
                      <NavLink to='/'><img className='site-name' src={BlogLogo} alt='home' /></NavLink>
                   </div>
