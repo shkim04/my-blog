@@ -38,7 +38,7 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 750px) and (min-width: 321px) {
+@media (max-width: 750px) {
   .sidenav-bar 
   .sidenav-nested-bar-container {
     margin-bottom: 0;
