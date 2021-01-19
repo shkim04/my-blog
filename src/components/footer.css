@@ -29,7 +29,6 @@ footer {
     width: auto;
     padding: 0 10px;
     justify-content: space-between;
-    position: unset;
   }
 }
 
@@ -53,9 +52,8 @@ footer {
 @media (max-width: 750px) {
   .footer-container .footer-main .footer-content {
     font-size: 15px;
-}
-
-  .footer-container .footer-main .icons a {
-   font-size: 13px;
+  }
+  .footer-container .footer-main .icons {
+    position: initial;
   }
 }
