@@ -7,6 +7,12 @@
   width: 100%;
 }
 
+@media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
+  #contents {
+    height: 667px;
+  }
+}
+
 #contents .main-start-section {
   width: 100%;
   height: 400px;
