@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/blog/static/css/main.fc5f9288.chunk.css",
+    "main.js": "/blog/static/js/main.7d39c1e3.chunk.js",
+    "main.js.map": "/blog/static/js/main.7d39c1e3.chunk.js.map",
+    "runtime-main.js": "/blog/static/js/runtime-main.d7a5a8f7.js",
+    "runtime-main.js.map": "/blog/static/js/runtime-main.d7a5a8f7.js.map",
+    "static/js/2.9d8d553f.chunk.js": "/blog/static/js/2.9d8d553f.chunk.js",
+    "static/js/2.9d8d553f.chunk.js.map": "/blog/static/js/2.9d8d553f.chunk.js.map",
+    "index.html": "/blog/index.html",
+    "static/css/main.fc5f9288.chunk.css.map": "/blog/static/css/main.fc5f9288.chunk.css.map",
+    "static/js/2.9d8d553f.chunk.js.LICENSE.txt": "/blog/static/js/2.9d8d553f.chunk.js.LICENSE.txt",
+    "static/media/addition-practice.17d2c265.mp4": "/blog/static/media/addition-practice.17d2c265.mp4",
+    "static/media/avatar_large.be99a7b1.png": "/blog/static/media/avatar_large.be99a7b1.png",
+    "static/media/calculator.css": "/blog/static/media/digital-7.93911ab1.ttf",
+    "static/media/trips-tracker.da0d8991.mp4": "/blog/static/media/trips-tracker.da0d8991.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7a5a8f7.js",
+    "static/js/2.9d8d553f.chunk.js",
+    "static/css/main.fc5f9288.chunk.css",
+    "static/js/main.7d39c1e3.chunk.js"
+  ]
+}
