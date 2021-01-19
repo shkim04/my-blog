@@ -9,7 +9,7 @@
 
 @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
   #contents {
-    height: 667px;
+    min-height: 667px;
   }
 }
 
