@@ -28,7 +28,7 @@ header {
 
 @media (max-width: 950px) and (min-width: 321px) {
   .description .site-name-container {
-    height: 25px;
+    height: 45px;
   }
 }
 
