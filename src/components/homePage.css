@@ -7,11 +7,17 @@
   width: 100%;
 }
 
-@media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
+@media (max-width: 750px) {
+  #contents {
+    min-height: unset;
+  }
+}
+
+/* @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
   #contents {
     min-height: 667px;
   }
-}
+} */
 
 #contents .main-start-section {
   width: 100%;

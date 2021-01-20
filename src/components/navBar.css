@@ -163,14 +163,14 @@
   .sidenav-nested-bar-container 
   .sidenav-nested-bar .nav-bar-list a {
     padding: 10px 0px 10px 0px;
-    background-color: #f1f1f1;
+    background-color: #7d7d7d;
   } 
 }
 
 .sidenav-nested-bar-container 
 .sidenav-nested-bar 
 .nav-bar-list a:hover {
-  background-color: #f8f8f8;
+  background-color: #f1f1f1;
 }
 
 .sidenav-nested-bar-container 
@@ -185,11 +185,5 @@
   .sidenav-nested-bar 
   .nav-bar-list a:hover{
     background-color: #ff0000
-  }
-  .sidenav-nested-bar-container 
-  .sidenav-nested-bar 
-  .active {
-    border: 0;
-    background-color: #f1f1f1;
   }
 }
