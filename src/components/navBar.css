@@ -5,6 +5,7 @@
   border-right: 1px solid #eeeeee;
   background-color: #ffffff;
   padding-top: 30px;
+  overflow-y: auto;
 }
 
 @media (max-width: 750px) {
