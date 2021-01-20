@@ -41,7 +41,6 @@ body {
     .content-container {
         margin: 0;
         position: relative;
-        min-height: 100%;
     }
 }
 
