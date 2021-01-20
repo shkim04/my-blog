@@ -9,7 +9,7 @@
 
 @media (max-width: 750px) {
   #contents {
-    min-height: unset;
+    min-height: 100%;
   }
 }
 
