@@ -112,8 +112,8 @@
 .sidenav-bar 
 .sidenav-nested-bar-container 
 .nav-bar-title-container i {
-  font-size: 1em;
-  padding-right: 0.55em;
+  width: 1.56em;
+  padding-right: 0.56em;
   color: #000000;
 }
 
