@@ -15,8 +15,8 @@ export default class Goal extends Component {
                         much into React. I decided to build a blog based on React. 
                         <br />
                         <br />
-                        At first, it was not even easy to set up the environments for building such as webpack, babel, 
-                        react to make them work together. But I have got a lot of help from anonymous people from google, stackoverflow etc.
+                        At first, it was not even easy to set up the environments for building such as Webpack, Babel, 
+                        React to make them work together. But I have got a lot of help from anonymous people from google, stackoverflow etc.
                         I am fascinated by the idea that people in tech try to find solutions together online. 
 
                         So, I would like to be a developer that contributes to people who need help. 
