@@ -46,7 +46,7 @@
   .sidenav-nested-bar-container {
     margin-bottom: 0;
     float: left;
-    width: 80px;
+    width: 100px;
     padding: 8px 10px;
     text-align: center;
   }
@@ -122,6 +122,11 @@
     padding: 0;
   }
 } */
+
+.sidenav-nested-bar-container 
+.nav-bar-title-container a {
+  text-decoration: none;
+}
 
 .sidenav-nested-bar-container 
 .nav-bar-title-container 
