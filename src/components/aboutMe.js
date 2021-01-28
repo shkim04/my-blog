@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import './aboutMe.css';
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.REACT_GOOGLE_API_KEY;
 class AboutMe extends Component {
     constructor(props) {
         super(props);
