@@ -4,7 +4,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import ScrollToTop from './components/scroll';
 import Layout from './components/layout';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './Blog.css';
 
 export default class Blog extends Component {
