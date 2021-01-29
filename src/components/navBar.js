@@ -3,7 +3,11 @@ import { NavLink } from 'react-router-dom';
 import './navBar.css';
 
 export default class NavBar extends Component {
-   
+    handleDropDown = (event) => {
+        const clicked = event.currentTarget;
+        clicked.classList.toggle('bottom-nav-responsive')
+    }
+
     render() {    
         return (
             <div id='nav-bar-container' style={{bottom: this.props.bottom}}>
@@ -16,7 +20,7 @@ export default class NavBar extends Component {
                             </NavLink>
                         </div>
                     </div>
-                    <div className='sidenav-nested-bar-container'>
+                    <div className='sidenav-nested-bar-container' onClick={this.handleDropDown}>
                         <div className='nav-bar-title-container'>
                             <i className="fas fa-info-circle"></i>
                             <span className='nav-bar-title'>Info</span>
@@ -34,7 +38,7 @@ export default class NavBar extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className='sidenav-nested-bar-container'>
+                    <div className='sidenav-nested-bar-container' onClick={this.handleDropDown}>
                         <div className='nav-bar-title-container'>
                             <i className="fas fa-project-diagram"></i>
                             <span className='nav-bar-title'>Project</span>
