@@ -5,9 +5,17 @@ import './navBar.css';
 export default class NavBar extends Component {
     handleDropDown = (event) => {
         const clicked = event.currentTarget;
+        const sideNav = clicked.parentNode.childNodes;
+        console.log(clicked);
+        
+        sideNav.forEach(el => {
+            if(el.classList.contains('bottom-nav-responsive')){
+                el.classList.remove('bottom-nav-responsive');
+            }
+        })
+        console.log(sideNav);
         clicked.classList.toggle('bottom-nav-responsive')
     }
-
     render() {    
         return (
             <div id='nav-bar-container' style={{bottom: this.props.bottom}}>
