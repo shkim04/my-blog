@@ -71,11 +71,18 @@
 
   .sidenav-nested-bar-container 
   .sidenav-nested-bar {
-    display: block;
+    display: none;
     position: absolute;
     bottom: 41px;
     left: 0px;
     background-color: #f1f1f1;
+  }
+}
+
+@media (max-width: 750px) {
+  .sidenav-nested-bar-container.bottom-nav-responsive 
+  .sidenav-nested-bar {
+    display: block;
   }
 }
 
@@ -122,18 +129,18 @@
   font-size: 14px;
 }
 
+.sidenav-nested-bar-container 
+.sidenav-nested-bar 
+.nav-bar-list a:hover {
+  background-color: #dddddd;
+}
+
 @media (max-width: 750px) {
   .sidenav-nested-bar-container 
   .sidenav-nested-bar 
   .nav-bar-list a {
     padding: 10px 0px 10px 0px;
   }
-
-  .sidenav-nested-bar-container 
-  .sidenav-nested-bar 
-  .nav-bar-list a:hover {
-    background-color: #dddddd;
-  } 
 }
 
 @media (min-width: 751px) {

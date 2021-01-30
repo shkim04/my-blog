@@ -14,10 +14,11 @@ export default class ClickSideNavBar extends Component {
         document.removeEventListener('mousedown', this.handleDropDown)
     }
     handleDropDown(event) {
-        if(this.dropDownRef && this.dropDownRef.current.contains(event.target)) {
-            return;
+        if(this.dropDownRef && 
+            this.dropDownRef.current.contains(event.target)) {
+            return; 
         }
-        this.props.onClick(event);
+        document.getElementById(this.props.id).classList.remove(this.props.responsiveElement);
     }
     render() {
         return (
