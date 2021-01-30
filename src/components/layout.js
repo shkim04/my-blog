@@ -15,6 +15,7 @@ export default class Layout extends Component {
         this.state = {
             bottom: 0
         }
+        this.handleScrollAndResize = this.handleScrollAndResize.bind(this);
     }
       
     componentDidMount() {
@@ -27,7 +28,7 @@ export default class Layout extends Component {
         window.removeEventListener('scroll load resize', this.handleScrollAndResize);
     }
     
-    handleScrollAndResize = () => {
+    handleScrollAndResize() {
         let pageHeight = document.getElementById('root').offsetHeight;
         let footerHeight = document.getElementById('footer').offsetHeight;
         let windowHeight = window.innerHeight;

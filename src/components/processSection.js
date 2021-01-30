@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import './processSection.css';
 
-const Filler = (props) => {
+function Filler(props) {
     return (
-        <div id='filler' style={{width:`${props.percentage}%`}}
-        />
+        <div id='filler' style={{width:`${props.percentage}%`}} />
     )
 }
 
-const ProgressBar = (props) => {
+function ProgressBar(props) {
     return (
         <div id='progress-bar'>
             <div className='progress-bar-container'>
-                <Filler percentage={props.percentage}/>
+                <Filler percentage={props.percentage} />
             </div>
             <div className='zero-to-hundred clearfix'>
                 <span className='zero'>0</span>
