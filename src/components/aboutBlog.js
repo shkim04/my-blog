@@ -10,7 +10,7 @@ export default class AboutBlog extends Component {
                     <h3 id='about-blog-title' className='sub-title'># About This Blog</h3>
                     <div className='about-blog-description'>
                         Its main role of this blog is to use it as a potential resume. 
-                        I will keep updating this blog. So, predictably the blog will have more functions or contents and more fancy UIs.
+                        I will keep this blog updated. So, predictably the blog will have more functions or contents and more fancy UIs.
                         <br />
                         <br />
                         Below are the links to my social medias that show other aspects of me in real life.

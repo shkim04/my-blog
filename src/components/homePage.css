@@ -56,12 +56,18 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 750px) and (min-width: 401px) {
   #contents .main-start-section .main-section-text{
     font-size: 15px;
   }
   #contents .main-start-section .main-section-text:first-child{
     font-size: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  #contents .main-start-section .main-section-text:first-child{
+    font-size: 35px;
   }
 }
 
