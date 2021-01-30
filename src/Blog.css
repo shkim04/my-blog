@@ -19,12 +19,6 @@ body {
     }
 }
 
-/* @media (max-width:320px) {
-    body {
-        font-size: 8px;
-    }
-} */
-
 #root {
     display: flex;
     flex-direction: column;
@@ -44,11 +38,12 @@ body {
     }
 }
 
-/* @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
-    .contents-contianer {
-      min-height: 667px;
+/* @media all and (device-width: 414px) and (orientation:portrait){
+    .content-container {
+      min-height: 414px;
     }
 } */
+
 
 .clearfix:after {
     content: "";

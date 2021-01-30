@@ -18,7 +18,7 @@ export default class ClickSideNavBar extends Component {
             this.dropDownRef.current.contains(event.target)) {
             return; 
         }
-        document.getElementById(this.props.id).classList.remove(this.props.responsiveElement);
+        this.props.onClick(this.props.id, this.props.responsiveElement)
     }
     render() {
         return (

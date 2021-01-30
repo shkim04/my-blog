@@ -39,14 +39,10 @@ footer {
 
 .footer-container .footer-main .icons a {
   margin-right: 8px;
-  font-size: 15px;
   color: #ffffff;
 }
 
 @media (max-width: 750px) {
-  .footer-container .footer-main .footer-content {
-    font-size: 15px;
-  }
   .footer-container .footer-main .icons {
     position: initial;
   }

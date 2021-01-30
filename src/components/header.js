@@ -9,10 +9,14 @@ export default class Header extends Component {
       super(props);
       
       this.handleTopNavDropDown = this.handleTopNavDropDown.bind(this);
+      this.removeResponsive = this.removeResponsive.bind(this);
    }
    
-   handleTopNavDropDown() {
-      document.getElementById('top-nav-bar').classList.toggle('top-nav-responsive');
+   handleTopNavDropDown(id, responsive) {
+      document.getElementById(id).classList.toggle(responsive);
+   }
+   removeResponsive(id, responsive) {
+      document.getElementById(id).classList.remove(responsive);
    }
    render() {
       return (
@@ -24,7 +28,7 @@ export default class Header extends Component {
                <div 
                   className='top-nav-bar' 
                   id='top-nav-bar' 
-                  onClick={this.handleTopNavDropDown}
+                  onClick={() => this.handleTopNavDropDown('top-nav-bar', 'top-nav-responsive')}
                >
                   <div className='menu'>
                      <button className='menu-btn'>
@@ -34,7 +38,8 @@ export default class Header extends Component {
                         id='top-nav-bar'
                         responsiveElement='top-nav-responsive' 
                         className='menu-content' 
-                        onClick={this.handleTopNavDropDown}>
+                        onClick={this.removeResponsive}
+                     >
                         <NavLink to='/about_blog'>About Blog</NavLink>
                         <a href='http://www.freecodecamp.org' alt='mentor-website'>freecodecamp.org</a>
                      </ClickNavBar>

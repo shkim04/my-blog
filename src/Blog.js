@@ -11,7 +11,7 @@ export default class Blog extends Component {
   
   render() {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <ScrollToTop />
         <Header />
         <Switch>

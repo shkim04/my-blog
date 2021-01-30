@@ -7,17 +7,16 @@ export default class NavBar extends Component {
     constructor(props) {
         super(props);
 
-        this.handleInfoNav = this.handleInfoNav.bind(this);
-        this.handleProjectNav = this.handleProjectNav.bind(this);
+        this.handleResponsive = this.handleResponsive.bind(this);
+        this.removeResponsiveBottom = this.removeResponsiveBottom.bind(this);
     }
 
-    handleInfoNav() {
-        document.getElementById('info').classList.toggle('bottom-nav-responsive')
+    handleResponsive(id, responsive) {
+        document.getElementById(id).classList.toggle(responsive)
     }
-
-    handleProjectNav() {
-        document.getElementById('project').classList.toggle('bottom-nav-responsive')
-    }
+    removeResponsiveBottom(id, responsive) {
+        document.getElementById(id).classList.remove(responsive);
+    }    
     render() {    
         return (
             <div id='nav-bar-container' style={{bottom: this.props.bottom}}>
@@ -30,7 +29,12 @@ export default class NavBar extends Component {
                             </NavLink>
                         </div>
                     </div>
-                    <div className='sidenav-nested-bar-container' id='info' tabIndex='-1' onClick={this.handleInfoNav}>
+                    <div 
+                        className='sidenav-nested-bar-container' 
+                        id='info' 
+                        tabIndex='-1' 
+                        onClick={() => this.handleResponsive('info', 'bottom-nav-responsive')}
+                    >
                         <div className='nav-bar-title-container'>
                             <i className="fas fa-info-circle"></i>
                             <span className='nav-bar-title'>Info</span>
@@ -39,7 +43,7 @@ export default class NavBar extends Component {
                             id='info'
                             responsiveElement='bottom-nav-responsive'
                             className='sidenav-nested-bar clearfix' 
-                            onClick={this.handleInfoNav}
+                            onClick={this.removeResponsiveBottom}
                         >
                             <div className='nav-bar-list'>
                                 <NavLink to='/about_me' activeClassName='active'>
@@ -53,7 +57,12 @@ export default class NavBar extends Component {
                             </div>
                         </ClickNavBar>
                     </div>
-                    <div className='sidenav-nested-bar-container' id='project' tabIndex='-1' onClick={this.handleProjectNav}>
+                    <div 
+                        className='sidenav-nested-bar-container' 
+                        id='project' 
+                        tabIndex='-1' 
+                        onClick={() => this.handleResponsive('project', 'bottom-nav-responsive')}
+                    >
                         <div className='nav-bar-title-container'>
                             <i className="fas fa-project-diagram"></i>
                             <span className='nav-bar-title'>Project</span>
@@ -62,7 +71,7 @@ export default class NavBar extends Component {
                             id='project'
                             responsiveElement='bottom-nav-responsive' 
                             className='sidenav-nested-bar clearfix' 
-                            onClick={this.handleProjectNav}
+                            onClick={this.removeResponsiveBottom}
                         >
                             <div className='nav-bar-list'>
                                 <NavLink to='/beginning' activeClassName='active'>   

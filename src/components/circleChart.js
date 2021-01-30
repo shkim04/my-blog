@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import fetch from 'cross-fetch';
 import * as d3 from 'd3';
 import './circleChart.css';
 

@@ -7,9 +7,15 @@
   width: 100%;
 }
 
-/* @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
+/* @media (max-width: 750px) {
   #contents {
-    min-height: 667px;
+    min-height: initial;
+  }
+} */
+
+/* @media all and (device-width: 414px) and (orientation:portrait){
+  #contents {
+    min-height: 414px;
   }
 } */
 
