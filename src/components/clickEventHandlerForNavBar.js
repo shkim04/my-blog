@@ -14,8 +14,7 @@ export default class ClickSideNavBar extends Component {
         document.removeEventListener('mousedown', this.handleDropDown)
     }
     handleDropDown(event) {
-        if(this.dropDownRef && 
-            this.dropDownRef.current.contains(event.target)) {
+        if(this.dropDownRef && this.dropDownRef.current.contains(event.target)) {
             return; 
         }
         this.props.onClick(this.props.id, this.props.responsiveElement)

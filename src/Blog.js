@@ -4,14 +4,14 @@ import Header from './components/header';
 import Footer from './components/footer';
 import ScrollToTop from './components/scroll';
 import Layout from './components/layout';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Router, Route, Switch } from 'react-router-dom';
 import './Blog.css';
 
 export default class Blog extends Component {
   
   render() {
     return (
-      <Router>
+      <HashRouter basename='/'>
         <ScrollToTop />
         <Header />
         <Switch>
@@ -19,7 +19,7 @@ export default class Blog extends Component {
           <Route render={()=> <Layout />}/>
         </Switch>
         <Footer />
-      </Router>
+      </HashRouter>
     )
   }
 }
