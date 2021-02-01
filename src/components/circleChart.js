@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fetch from 'cross-fetch';
+import fetch from 'cross-fetch'
 import * as d3 from 'd3';
 import './circleChart.css';
 
@@ -82,7 +82,7 @@ export default class CircleChart extends Component{
                     .style('fill', (d, i) => color(d.Doping !== ''))
                     .on('mouseover', (d, i) => {
                         const svgDim = svgCanvas.node().getBoundingClientRect();
-                        console.log(d, i)
+                        
                         tooltip.transition()
                                .duration(0)
                                .style('opacity', 1)
