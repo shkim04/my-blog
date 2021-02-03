@@ -22,7 +22,7 @@ const buttons = [
 ]
   
 const isOperator = /[+\-*/]/,
-      endsWithOperator = /[+\-*/]$/;
+      endsWithOperator = /[+\-*/]$/, endsWithZero = /[+\-*/](0)$/;
     
 export default class Calculator extends Component {
     constructor(props) {
@@ -40,7 +40,10 @@ export default class Calculator extends Component {
     
     displayInOut(button) {
         const {currentVal, inputFormula, calculated} = this.state;
-     
+
+    console.log(inputFormula.match(/(?<=[+\-*/])0$/))
+    console.log(inputFormula.match(endsWithZero))
+
         if(button === '=') {
             /^[0-9].*[0-9]$/.test(inputFormula) ? 
             this.setState({
@@ -64,11 +67,11 @@ export default class Calculator extends Component {
             this.setState({
                 currentVal: currentVal === '0' || isOperator.test(currentVal) ? 
                                 button === '.' ? 
-                                currentVal + button : button
+                                '0' + button : button
                             : currentVal + button,
-                inputFormula: /(?<=[+\-*/])0$/.test(inputFormula) ?
-                                button === '0' ? inputFormula :
-                                inputFormula.replace(inputFormula.match(/(?<=[+\-*/])0$/), button)
+                inputFormula: endsWithZero.test(inputFormula) ?//lookahead -> possibly caused blank pages on iOS
+                                button === '.' ? inputFormula + button :
+                                inputFormula.replace(inputFormula.match(endsWithZero)[1], button)
                             : inputFormula === '0' ?
                                 button : inputFormula + button,
             })
@@ -81,13 +84,14 @@ export default class Calculator extends Component {
                 calculated: false
             }) :
             this.setState({
-                currentVal: currentVal === '0' ? currentVal : currentVal + button,
+                currentVal: button,
                 inputFormula: currentVal === '0' ? '' : 
                             endsWithOperator.test(inputFormula) ? 
                               inputFormula.replace(inputFormula.match(endsWithOperator), button)
                             : inputFormula + button,
             })
         }
+    
     }
 
     compute(string) {
@@ -111,13 +115,11 @@ export default class Calculator extends Component {
         for (let regex of regexes) {
             do {
                 found = false;
-                if(/^[0-9]+$/.test(string)) {
-                    found = true; break;
-                }
-                else {
-                    string = string.replace(regex, (_, ...args) => {
-                        return Math.round(cal(...args) * 1000000000000) / 1000000000000;
-                    });
+                string = string.replace(regex, (_, ...args) => {
+                    return Math.round(cal(...args) * 1000000000000) / 1000000000000;
+                });
+                if(regex.test(string)){
+                    found = true;
                 }
             } while (found);
         }
