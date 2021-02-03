@@ -70,7 +70,7 @@ export default class Calculator extends Component {
                                 '0' + button : button
                             : currentVal + button,
                 inputFormula: endsWithZero.test(inputFormula) ?//lookahead -> possibly caused blank pages on iOS
-                                button === '.' ? inputFormula + button :
+                                button === '.' ? inputFormula + '0' + button :
                                 inputFormula.replace(inputFormula.match(endsWithZero)[1], button)
                             : inputFormula === '0' ?
                                 button : inputFormula + button,
