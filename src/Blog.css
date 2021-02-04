@@ -38,13 +38,6 @@ body {
     }
 }
 
-/* @media all and (device-width: 414px) and (orientation:portrait){
-    .content-container {
-      min-height: 414px;
-    }
-} */
-
-
 .clearfix:after {
     content: "";
     display: table;

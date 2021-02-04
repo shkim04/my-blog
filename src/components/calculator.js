@@ -41,9 +41,6 @@ export default class Calculator extends Component {
     displayInOut(button) {
         const {currentVal, inputFormula, calculated} = this.state;
 
-    console.log(inputFormula.match(/(?<=[+\-*/])0$/))
-    console.log(inputFormula.match(endsWithZero))
-
         if(button === '=') {
             /^[0-9].*[0-9]$/.test(inputFormula) ? 
             this.setState({

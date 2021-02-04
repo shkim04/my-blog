@@ -118,7 +118,7 @@ export default class CircleChart extends Component{
                                 .append('g')
                                 .attr('class', 'legend')
                                 .attr('id', 'legend')
-                                .attr('transform', function(d, i) {
+                                .attr('transform', (d, i) => {
                                     return "translate(0," + (canvasHeight/2 - i * 20) + ")";
                                 });
   
