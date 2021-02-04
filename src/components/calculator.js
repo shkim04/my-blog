@@ -66,11 +66,11 @@ export default class Calculator extends Component {
                                 button === '.' ? 
                                 '0' + button : button
                             : currentVal + button,
-                inputFormula: endsWithZero.test(inputFormula) ?//lookahead -> possibly caused blank pages on iOS
-                                button === '.' ? inputFormula + '0' + button :
+                inputFormula: endsWithZero.test(inputFormula) ?
                                 inputFormula.replace(inputFormula.match(endsWithZero)[1], button)
-                            : inputFormula === '0' ?
-                                button : inputFormula + button,
+                                : endsWithOperator.test(inputFormula) ?
+                                button === '.' ? inputFormula + '0' + button : inputFormula + button
+                            : inputFormula + button
             })
         }
         else {
