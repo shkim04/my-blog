@@ -59,7 +59,7 @@ header {
 @media (max-width: 750px) {
   .description .top-nav-bar .menu .menu-btn {
     margin: 0;
-    display: block;
+    display: block; 
     outline: none;
     border: none;
     font-size: 25px;
@@ -99,4 +99,10 @@ header {
   .menu-content {
     display: block;
   }
+}
+
+@media (max-width: 414px) {
+  .description .top-nav-bar .menu .menu-btn {
+    padding: 0 2px;
+  } 
 }

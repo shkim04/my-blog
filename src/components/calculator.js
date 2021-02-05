@@ -57,12 +57,12 @@ export default class Calculator extends Component {
         else if(button === '.') {
             calculated === true ? 
             this.setState({
-                currentVal: currentVal + button,
+                currentVal: button,
                 inputFormula: currentVal + button,
                 calculated: false
             }) : 
             this.setState({
-                currentVal: currentVal + button,
+                currentVal: button,
                 inputFormula: endsWithOperator.test(inputFormula) ?
                                 inputFormula + '0' + button
                             : inputFormula + button
@@ -76,9 +76,7 @@ export default class Calculator extends Component {
                 calculated: true
             }) : 
             this.setState({
-                currentVal: currentVal === '0' || isOperator.test(currentVal) ? 
-                            button
-                            : currentVal + button,
+                currentVal: button,
                 inputFormula: endsWithZero.test(inputFormula) ?
                                 inputFormula.replace(inputFormula.match(endsWithZero)[1], button)
                             : inputFormula + button
@@ -87,14 +85,13 @@ export default class Calculator extends Component {
         else {
             calculated === true ? 
             this.setState({
-                currentVal : currentVal === '0' ? currentVal : button,
-                inputFormula: currentVal === '0'? '' : currentVal + button,
+                currentVal : button,
+                inputFormula: currentVal + button,
                 calculated: false
             }) :
             this.setState({
                 currentVal: button,
-                inputFormula: currentVal === '0' ? '' : 
-                            endsWithOperator.test(inputFormula) ? 
+                inputFormula: endsWithOperator.test(inputFormula) ? 
                               inputFormula.replace(inputFormula.match(endsWithOperator), button)
                             : inputFormula + button,
             })
