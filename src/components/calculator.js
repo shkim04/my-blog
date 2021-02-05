@@ -63,9 +63,11 @@ export default class Calculator extends Component {
             }) : 
             this.setState({
                 currentVal: button,
-                inputFormula: endsWithOperator.test(inputFormula) ?
+                inputFormula: inputFormula === '' ? 
+                              currentVal + button
+                            : endsWithOperator.test(inputFormula) ?
                                 inputFormula + '0' + button
-                            : inputFormula + button
+                                : inputFormula + button
             })
         }
         else if(!isOperator.test(button)) {
@@ -78,8 +80,8 @@ export default class Calculator extends Component {
             this.setState({
                 currentVal: button,
                 inputFormula: endsWithZero.test(inputFormula) ?
-                                inputFormula.replace(inputFormula.match(endsWithZero)[1], button)
-                            : inputFormula + button
+                              inputFormula.replace(inputFormula.match(endsWithZero)[1], button)
+                              : inputFormula + button
             })
         }
         else {
@@ -93,7 +95,7 @@ export default class Calculator extends Component {
                 currentVal: button,
                 inputFormula: endsWithOperator.test(inputFormula) ? 
                               inputFormula.replace(inputFormula.match(endsWithOperator), button)
-                            : inputFormula + button,
+                              : inputFormula + button,
             })
         }
     
