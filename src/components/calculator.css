@@ -15,7 +15,7 @@
   background: #f7f7f7;
   display: flex;
   justify-content: center;
-  -webkit-justfy-content: center;
+  -webkit-justify-content: center;
   align-items: center;
   -webkit-align-items: center;
 }
@@ -30,7 +30,6 @@
   -webkit-justify-content: center;
   align-items: center;
   -webkit-align-items: center;
-  grid-template-rows: 60px auto;
   grid-template-columns: repeat(4, minmax(80px, auto))
 }
 

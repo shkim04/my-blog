@@ -54,6 +54,20 @@ export default class Calculator extends Component {
                 calculated: false
             })
         }
+        else if(button === '.') {
+            calculated === true ? 
+            this.setState({
+                currentVal: currentVal + button,
+                inputFormula: currentVal + button,
+                calculated: false
+            }) : 
+            this.setState({
+                currentVal: currentVal + button,
+                inputFormula: endsWithOperator.test(inputFormula) ?
+                                inputFormula + '0' + button
+                            : inputFormula + button
+            })
+        }
         else if(!isOperator.test(button)) {
             calculated === true ? 
             this.setState({
@@ -63,14 +77,10 @@ export default class Calculator extends Component {
             }) : 
             this.setState({
                 currentVal: currentVal === '0' || isOperator.test(currentVal) ? 
-                                button === '.' ? 
-                                '0' + button : button
+                            button
                             : currentVal + button,
                 inputFormula: endsWithZero.test(inputFormula) ?
-                                button === '.' ? inputFormula + button :
                                 inputFormula.replace(inputFormula.match(endsWithZero)[1], button)
-                                : endsWithOperator.test(inputFormula) ?
-                                button === '.' ? inputFormula + '0' + button : inputFormula + button
                             : inputFormula + button
             })
         }
