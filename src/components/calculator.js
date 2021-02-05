@@ -67,6 +67,7 @@ export default class Calculator extends Component {
                                 '0' + button : button
                             : currentVal + button,
                 inputFormula: endsWithZero.test(inputFormula) ?
+                                button === '.' ? inputFormula + button :
                                 inputFormula.replace(inputFormula.match(endsWithZero)[1], button)
                                 : endsWithOperator.test(inputFormula) ?
                                 button === '.' ? inputFormula + '0' + button : inputFormula + button
